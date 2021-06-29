@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.formdiv {
+  text-align: center;
+  align-items: center;
+  height: 300px;
+  width: 500px;
+  border: 2px black solid;
+  padding: auto;
+  margin-left: 400px;
+  margin-top: 150px;
+}
+label {
+  margin-right: 10px;
+}
+input {
+  width: 250px;
+}
