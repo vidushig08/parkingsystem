@@ -17,11 +17,12 @@ class App extends Component{
           <Route exact path="/login" component={Login}></Route>
           <Route exact path="/signup" component={Signup}></Route>
           <Route exact path="/reset" component={Reset}></Route>
+          <Route exact path="/main" component={Main}></Route>
           <Route component={notfound}></Route>
+          <Redirect to="/404"></Redirect>
         </Switch>
       </Router>
     )
-    
   }
 }
 

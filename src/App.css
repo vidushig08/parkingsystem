@@ -4,19 +4,30 @@
 .formdiv {
   text-align: center;
   align-items: center;
-  height: 300px;
-  width: 500px;
+  height: 550px;
+  width: 700px;
   border: 2px black solid;
   padding: auto;
-  margin-left: 400px;
-  margin-top: 150px;
+  margin-left: 300px;
+  margin-top: 10px;
 }
 label {
   margin-right: 10px;
 }
 input {
   width: 250px;
+  height: 20px;
+  margin-bottom: 10px;
 }
 button {
   cursor: pointer;
+  width: 30%;
+}
+p {
+  margin-top: -10px;
+  margin-bottom: 0px;
+  color: red;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 12px;
 }

@@ -1,18 +1,19 @@
 import React from 'react'
-import Reset from './reset'
+import {Link} from 'react-router-dom'
 
 function Login() {
     return (
         <div class="formdiv">
-            <h2>Login Existing User</h2>
+            <h2>Login for Existing User</h2>
             <form action="">
                 <label>Email:</label> 
                 <input type="email" id="email" placeholder="Enter email here" required></input><br />
                 <label>Password:</label> 
                 <input type="password" placeholder="Enter password here" required></input><br /><br />
-                <button>Login</button><br /><br />
+                <button type="submit">Login</button><br /><br />
             </form>
-            <button onClick={event =>  window.location.href='/reset'}>Forgot Password</button>
+            <Link to="/reset">Forgot Password</Link><br /><br />
+            <button onClick={event =>  window.location.href='/main'}>Back to Home Page </button>
         </div>
     )
 }

@@ -6,7 +6,7 @@ function Main() {
     return (
         <div class="formdiv">
             <br /><br />
-            <h2>Parking Lot System</h2><br /><br />
+            <h1>PARKING LOT SYSTEM</h1><br /><br />
             <label>Existing User: </label> &nbsp;&nbsp;&nbsp;&nbsp;
             <button onClick={event =>  window.location.href='/login'}>Login</button>
             <br /><br />
