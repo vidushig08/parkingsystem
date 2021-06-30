@@ -11,7 +11,7 @@ function Main() {
             <button onClick={event =>  window.location.href='/login'}>Login</button>
             <br /><br />
             <label>New User: </label> &nbsp;&nbsp;&nbsp;&nbsp;
-            <button onClick={event =>  window.location.href='/signup'}>Signup</button>
+            <button onClick={event =>  window.location.href='/signup'}>Sign Up</button>
             <br /><br />
         </div>
     )

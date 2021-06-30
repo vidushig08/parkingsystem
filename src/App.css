@@ -25,7 +25,7 @@ button {
 }
 p {
   margin-top: -10px;
-  margin-bottom: 0px;
+  margin-bottom: -10px;
   color: red;
   margin-left: 40px;
   margin-right: 40px;

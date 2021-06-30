@@ -69,6 +69,16 @@ const Signup = () => {
                     onChange={handleChange}>
                 </input>
                 {errors.city && <p>{errors.city}</p>}<br />
+                <label>State: </label>
+                <input 
+                    id="state" 
+                    name="state"
+                    type="text" 
+                    placeholder="Enter state here" 
+                    value={values.state}
+                    onChange={handleChange}>
+                </input>
+                {errors.state && <p>{errors.state}</p>}<br />
                 <label>Vehicle Number: </label>
                 <input 
                     id="vehicleno" 

@@ -8,6 +8,7 @@ const useForm = (validate) => {
         password:'',
         cpassword:'',
         city:'',
+        state:'',
         vehicleno:''
     })
     const [errors, setErrors] = useState({
