@@ -7,6 +7,7 @@ import Main from './components/main';
 import Login from './components/login';
 import Signup from './components/signup';
 import Reset from './components/reset';
+import Form from './components/form';
 import notfound from './components/notfound';
 class App extends Component{
   render() {
@@ -18,6 +19,7 @@ class App extends Component{
           <Route exact path="/signup" component={Signup}></Route>
           <Route exact path="/reset" component={Reset}></Route>
           <Route exact path="/main" component={Main}></Route>
+          <Route exact path="/form" component={Form}></Route>
           <Route component={notfound}></Route>
           <Redirect to="/404"></Redirect>
         </Switch>

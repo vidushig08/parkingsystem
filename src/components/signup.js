@@ -2,8 +2,9 @@ import React from 'react'
 import useForm from './useForm'
 import validate from './validationform'
 
-const Signup = () => {
-    const {handleChange, values, handleSubmit,errors} = useForm(validate);
+const Signup = ({submitForm}) => {
+    const {handleChange, values, handleSubmit,errors} 
+    = useForm(submitForm, validate);
     return (
         <div class="formdiv">
             <h2>Signup for New User</h2>

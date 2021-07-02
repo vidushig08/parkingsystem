@@ -10,7 +10,7 @@ export default function Validationform(values) {
     }
     if(!values.phone){
         errors.phone = "Phone Number required"
-    } else if(values.phone.length!=10){
+    } else if(values.phone.length!==10){
         errors.phone = "Phone Number needs to be exactly 10 digits"
     }
     if(!values.password){
