@@ -1,0 +1,35 @@
+.loginformdiv {
+  align-items: center;
+  text-align: center;
+  margin-top: 120px;
+  margin-left: 400px;
+  height: 300px;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.login-btn {
+  height: 30px;
+  width: 150px;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  background-color: #0091fb;
+  color: #fff;
+  font-weight: 500;
+}
+.home-btn {
+  height: 30px;
+  width: 150px;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  border: #0091fb 1px solid;
+  background-color: white;
+  color: #0091fb;
+  font-weight: 500;
+}
+#email {
+  margin-left: 29px;
+}

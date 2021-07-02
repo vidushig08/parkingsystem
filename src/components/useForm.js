@@ -30,9 +30,12 @@ const useForm = (callback, validate) => {
     };
 
     useEffect(() => 
-        { if (Object.keys(errors).length === 0 && isSubmitting) 
-            {callback()}
-        }, [errors]);
+        { if (Object.keys(errors).length == 0 && isSubmitting) 
+            {
+                window.location.href = '/login';
+            }
+        }, [errors]
+    );
 
     return {handleChange,values, handleSubmit, errors}
 }

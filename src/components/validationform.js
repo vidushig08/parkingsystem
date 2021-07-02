@@ -34,7 +34,7 @@ export default function Validationform(values) {
     if(!values.vehicleno){
         errors.vehicleno = "Vehicle Number required"
     } else if(!values.vehicleno.match(vehicle)){
-        errors.vehicleno= "Incorrectly formatted"
+        errors.vehicleno= "Incorrectly formatted (Hint: HR 26 DQ 5551)"
     }
 
     return errors;

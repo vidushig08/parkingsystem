@@ -10,8 +10,8 @@ const Form = () => {
 
     return (
         <div>
-            {!isSubmitted ? <Signup submitForm=
-            {submitForm}/> : <SignupSuccess/>
+            {
+                !isSubmitted ? <Signup submitForm={submitForm}/> : <SignupSuccess/>
             }
         </div>
     )

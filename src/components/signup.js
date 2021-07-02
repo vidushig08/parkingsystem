@@ -1,11 +1,13 @@
 import React from 'react'
 import useForm from './useForm'
 import validate from './validationform'
+import './signup.css'
 
 const Signup = ({submitForm}) => {
     const {handleChange, values, handleSubmit,errors} = useForm(submitForm,validate);
     return (
-        <div class="formdiv">
+
+        <div class="signupformdiv">
             <h2>Signup for New User</h2>
             <form action="" onSubmit={handleSubmit}>
                 <label>Full Name:</label>
@@ -21,7 +23,7 @@ const Signup = ({submitForm}) => {
                 <br />
                 <label>Email:</label>
                 <input 
-                    id="email"
+                    id="email-s"
                     name="email"
                     type="email"
                     placeholder="Enter email here"
@@ -59,6 +61,21 @@ const Signup = ({submitForm}) => {
                     onChange={handleChange}>
                 </input>
                 {errors.cpassword && <p>{errors.cpassword}</p>}<br />
+
+                <label>State: </label>
+                <input 
+                    id="state"
+                    name="state"
+                    type="text"
+                    placeholder="Enter state here" 
+                    value={values.state}
+                    onChange={handleChange}>
+                </input>
+                {/* <select name="state" id="statel" size="1">
+                    <option value="" selected="selected">Please select your State</option>
+                </select> */}
+                {errors.state && <p>{errors.state}</p>}<br />
+
                 <label>City: </label>
                 <input 
                     id="city" 
@@ -69,30 +86,22 @@ const Signup = ({submitForm}) => {
                     onChange={handleChange}>
                 </input>
                 {errors.city && <p>{errors.city}</p>}<br />
-                <label>State: </label>
-                <input 
-                    id="state" 
-                    name="state"
-                    type="text" 
-                    placeholder="Enter state here" 
-                    value={values.state}
-                    onChange={handleChange}>
-                </input>
-                {errors.state && <p>{errors.state}</p>}<br />
+                
                 <label>Vehicle Number: </label>
                 <input 
                     id="vehicleno" 
                     name="vehicleno"
                     type="text" 
-                    placeholder="Enter vehicle number here" 
+                    placeholder="Hint: HR 26 DQ 5551" 
                     value={values.vehicleno}
                     onChange={handleChange}>
                 </input>
                 {errors.vehicleno && <p>{errors.vehicleno}</p>}<br></br>
-                <button type="submit">Sign Up</button>
+                <br />
+                <button class="signup-btn" type="submit">Sign Up</button>
                 <br /><br />
             </form>
-            <button onClick={event =>  window.location.href='/main'}>  Back to Home Page </button>
+            <button class="home-btn" onClick={event =>  window.location.href='/main'}>  Back to Home Page </button>
         </div>
     )
 }
