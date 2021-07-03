@@ -24,6 +24,22 @@ input {
   border-radius: 2px;
   border: black solid 1px;
 }
+select {
+  width: 255px;
+  height: 22px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  border: black solid 1px;
+  margin-left: 105px;
+}
+#dropstate {
+  width: 255px;
+  height: 22px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  border: black solid 1px;
+  margin-left: 95px;
+}
 button {
   cursor: pointer;
   width: 30%;

@@ -30,11 +30,12 @@ const useForm = (callback, validate) => {
     };
 
     useEffect(() => 
-        { if (Object.keys(errors).length == 0 && isSubmitting) 
+        { if (Object.keys(errors).length === 0 && isSubmitting) 
             {
+                alert("You have been registered successfully")
                 window.location.href = '/login';
             }
-        }, [errors]
+        }
     );
 
     return {handleChange,values, handleSubmit, errors}

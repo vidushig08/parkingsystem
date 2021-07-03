@@ -25,12 +25,12 @@ export default function Validationform(values) {
     } else if(values.cpassword !== values.password){
         errors.cpassword = "Passwords do not match"
     }
-    if(!values.city){
-        errors.city = "City required"
-    }
-    if(!values.state){
-        errors.state = "State required"
-    }
+    // if(!values.city){
+    //     errors.city = "City required"
+    // }
+    // if(!values.state){
+    //     errors.state = "State required"
+    // }
     if(!values.vehicleno){
         errors.vehicleno = "Vehicle Number required"
     } else if(!values.vehicleno.match(vehicle)){

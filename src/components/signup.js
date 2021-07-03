@@ -1,13 +1,15 @@
 import React from 'react'
 import useForm from './useForm'
 import validate from './validationform'
+import Dropdown from './dropdown'
 import './signup.css'
 
 const Signup = ({submitForm}) => {
     const {handleChange, values, handleSubmit,errors} = useForm(submitForm,validate);
-    return (
 
+    return (
         <div class="signupformdiv">
+            <br />
             <h2>Signup for New User</h2>
             <form action="" onSubmit={handleSubmit}>
                 <label>Full Name:</label>
@@ -62,7 +64,9 @@ const Signup = ({submitForm}) => {
                 </input>
                 {errors.cpassword && <p>{errors.cpassword}</p>}<br />
 
-                <label>State: </label>
+                <Dropdown/>
+                
+                {/* <label>State: </label>
                 <input 
                     id="state"
                     name="state"
@@ -71,9 +75,6 @@ const Signup = ({submitForm}) => {
                     value={values.state}
                     onChange={handleChange}>
                 </input>
-                {/* <select name="state" id="statel" size="1">
-                    <option value="" selected="selected">Please select your State</option>
-                </select> */}
                 {errors.state && <p>{errors.state}</p>}<br />
 
                 <label>City: </label>
@@ -85,7 +86,7 @@ const Signup = ({submitForm}) => {
                     value={values.city}
                     onChange={handleChange}>
                 </input>
-                {errors.city && <p>{errors.city}</p>}<br />
+                {errors.city && <p>{errors.city}</p>}<br /> */}
                 
                 <label>Vehicle Number: </label>
                 <input 
