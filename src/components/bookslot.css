@@ -1,0 +1,28 @@
+.bookslotform {
+  align-items: center;
+  text-align: center;
+  margin-top: 120px;
+  margin-left: 400px;
+  height: 300px;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.book {
+  height: 30px;
+  width: 150px;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  background-color: #0091fb;
+  color: #fff;
+  font-weight: 500;
+}
+
+#date {
+  margin-left: 38px;
+}
+#e-time {
+  margin-left: 6px;
+}
