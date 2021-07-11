@@ -7,13 +7,12 @@ const bookslot = () => {
         <div >
             <Navbar></Navbar>
             <form action="" class="bookslotform">
+                <br />
                 <h2>Book A Slot</h2>
                 <label htmlFor="">Date: </label>
                 <input id="date" type="date" /><br />
                 <label htmlFor="">Start Time: </label>
-                <input id="s-time" type="time" /><br />
-                <label htmlFor="">End Time: </label>
-                <input id="e-time" type="time" /><br />
+                <input id="s-time" type="time" /><br /><br />
                 <button className="book" type="submit">Book Slot</button>
             </form>
         </div>

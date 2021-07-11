@@ -12,7 +12,8 @@ function Login() {
                 <input type="email" id="email" placeholder="Enter email here" required></input><br />
                 <label>Password:</label> 
                 <input type="password" placeholder="Enter password here" required></input><br /><br />
-                <button type="submit" class="login-btn">Login</button><br /><br />
+                <button type="submit" class="login-btn" onClick={event =>  window.location.href='/bookslot'}>Login</button>
+                <br /><br />
             </form>
             <button class="home-btn" onClick={event =>  window.location.href='/reset'}>Forgot Password</button> &nbsp;&nbsp;&nbsp;
             {/* <Link to="/reset" class="forgot-btn">Forgot Password</Link> */}
