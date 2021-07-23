@@ -5,6 +5,9 @@ import (
 	"html/template"
 	"net/http"
 	"time"
+
+	"github.com/gorilla/mux"
+	//"gopkg.in/mgo.v2"
 )
 
 type Welcome struct {
@@ -15,7 +18,8 @@ type Welcome struct {
 func main() {
 	welcome := Welcome{"Anonymous", time.Now().Format(time.Stamp)}
 	templates := template.Must(template.ParseFiles("templates/welcome-template.html"))
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	r := mux.NewRouter()
+	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if name := r.FormValue("name"); name != "" {
 			welcome.Name = name
 		}
@@ -23,11 +27,11 @@ func main() {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 		}
 	})
-	http.HandleFunc("/api/v1/signup", func(w http.ResponseWriter, r *http.Request) {
+	r.HandleFunc("/api/v1/signup", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Successfully signed up"))
 		w.WriteHeader(http.StatusOK)
 	})
-	http.HandleFunc("/api/v1/login", func(w http.ResponseWriter, r *http.Request) {
+	r.HandleFunc("/api/v1/login", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Successfully logged in"))
 		w.WriteHeader(http.StatusOK)
 	})
