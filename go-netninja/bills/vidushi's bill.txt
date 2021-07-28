@@ -1,7 +1,0 @@
-Bill Breakdown: 
-jelly:                    ... $1.5 
-biscuit:                  ... $2.55 
-pie:                      ... $8.55 
-cake:                     ... $3.99 
-Tip:                      ... $7 
-Total:                    ... $23.59
