@@ -2,6 +2,8 @@ import React from 'react'
 import useForm from './useForm'
 import validate from './validationform'
 import Dropdown from './dropdown'
+import { Redirect } from 'react-router-dom';
+import {useState} from 'react';
 import './signup.css'
 
 const Signup = ({submitForm}) => {
@@ -10,8 +12,31 @@ const Signup = ({submitForm}) => {
     const [email,setEmail]=useState();
     const [password,setPassword]=useState();
     
-    const submit = (e: SyntheticEvent) =>{
+    const setRedirect = () => {
+        this.setState({
+        redirect: true
+    })
 
+    const submit = async (e) => {
+        e.preventDefault();
+
+        await fetch('http://localhost:8000/api/register', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                name,
+                email,
+                password
+            })
+        });
+
+        
+        setRedirect(true);
+        }
+
+        if (redirect) {
+            return <Redirect to="/login"/>;
+        }
     }
     return (
         <div class="signupformdiv">
