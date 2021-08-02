@@ -6,7 +6,13 @@ import './signup.css'
 
 const Signup = ({submitForm}) => {
     const {handleChange, values, handleSubmit,errors} = useForm(submitForm,validate);
+    const [name,setName]=useState();
+    const [email,setEmail]=useState();
+    const [password,setPassword]=useState();
+    
+    const submit = (e: SyntheticEvent) =>{
 
+    }
     return (
         <div class="signupformdiv">
             <br />
@@ -19,7 +25,8 @@ const Signup = ({submitForm}) => {
                     type="text" 
                     placeholder="Enter full name here" 
                     value={values.fullname}
-                    onChange={handleChange}>
+                    onChange={handleChange,e=>setName(e.target.value)}
+                    >
                 </input>
                 {errors.fullname && <p>{errors.fullname}</p>}
                 <br />
@@ -30,7 +37,7 @@ const Signup = ({submitForm}) => {
                     type="email"
                     placeholder="Enter email here"
                     value={values.email}
-                    onChange={handleChange}>
+                    onChange={handleChange,e=>setEmail(e.target.value)}>
                 </input>
                 {errors.email && <p>{errors.email}</p>}<br />
                 <label>Phone Number:</label> 
@@ -50,7 +57,7 @@ const Signup = ({submitForm}) => {
                     type="password" 
                     placeholder="Enter password here" 
                     value={values.password}
-                    onChange={handleChange}>
+                    onChange={handleChange,e=>setName(e.target.value)}>
                 </input>
                 {errors.password && <p>{errors.password}</p>}<br />
                 <label>Confirm Password: </label>
